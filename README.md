@@ -6,7 +6,7 @@ The main file is the [Explainability](Explainabiliy.ipynb) notebook in the repo.
 ## Introduction 
 
 The researchers propose a novel method of visualizing classifications made by a Transformer based model for both vision and NLP tasks. This method also allows to visualize explanations per class. 
-![alt text](samples/images/method.png)
+![alt text](method.png)
 
 The method contains of 3 steps:
 1. Calculating relevance for each attention matrix using a novel formulation of LRP.
@@ -83,11 +83,11 @@ def relprop(self, cam=None, method="transformer_attribution", start_layer=0, **k
 This method is compared against different other methods such as complete rollout and last layer attention visualization. These methods are generally class agnostic and show how much the model attends to all parts of the image. Transformer Attribution instead attends to class specific focus. 
 
 For this result, the gradients are calculated with respect to the final predicted class.
-![alt text](samples/images/againstmethods.png)
+![alt text](againstmethods.png)
 
 
 This method also allows us to visualize classes that are not the predicted one as well. For example, in an image containing a dog and a parrot, we can visualize the attribution to both the dog as well as the parrot
-![alt text](samples/images/dogbird.png)
+![alt text](dogbird.png)
 
 As a comparison against the invariance of attention rollout, 
-![alt text](samples/images/fruits.png)
+![alt text](fruits.png)
